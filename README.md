@@ -58,10 +58,9 @@ Before you begin, ensure you have the following installed:
         dotnet ef migrations add InitialCreate
         dotnet ef database update
         ```
-        (Adjust `RecipeShareDbContext` if your DbContext class has a different name).
 
 4.  **Configure CORS (if necessary):**
-    Ensure that the CORS policy in your `RecipeShare` (API) project's `Program.cs` is configured to allow requests from your React frontend's origin.
+    Ensure that the CORS policy in `RecipeShare` (API) project's `Program.cs` is configured to allow requests from React frontend's origin.
 
 5.  **Run the API:**
     * In Visual Studio, set `RecipeShare.API, and frontend` as the startup project. If the Visual Studio installed is setup for react projects, otherwize only 'RecipeShare.API'.
@@ -71,7 +70,7 @@ Before you begin, ensure you have the following installed:
 ### Frontend (React App) Setup, needed if VS is not configured to run the front end.
 
 1.  **Navigate to the Frontend Directory:**
-    Open a new terminal or command prompt and navigate to your `frontend` directory:
+    Open a new terminal or command prompt and navigate to the `frontend` directory:
     ```bash
     cd "RecipeShare\frontend"
     ```
@@ -83,7 +82,7 @@ Before you begin, ensure you have the following installed:
 
 3.  **Configure API Base URL:**
     Open `App.jsx` (or `App.js`) in the `frontend/src` directory.
-    Update the `API_BASE_URL` constant to match the URL where your ASP.NET Core API is running.
+    Update the `API_BASE_URL` constant to match the URL where the ASP.NET Core API is running.
     ```javascript
     const API_BASE_URL = 'http://localhost:5154/recipe';
     ```
@@ -127,6 +126,7 @@ graph TD
     Test[RecipeShare.Test (Unit/Integration Tests)] -- Tests --> B & C & D & F & G
 
 ## Rationale
+
 
 ### Overall Architecture
 
