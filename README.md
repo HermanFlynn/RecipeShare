@@ -14,6 +14,8 @@ A full-stack web application designed for managing and discovering recipes. This
   - [Data Access (Entity Framework Core)](#data-access-entity-framework-core)
   - [Dietary Tags Handling](#dietary-tags-handling)
   - [Project Separation](#project-separation)
+  - [Benchmark Results](#benchmark-results)
+  
 
 ## Setup Instructions
 
