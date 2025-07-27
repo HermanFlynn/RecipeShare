@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeShare.Util", "..\Reci
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "frontend", "..\frontend\frontend.esproj", "{349EC62A-85E3-C852-F5FF-E97A8E3AB0F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeShare.Benchy", "..\RecipeShare.Benchy\RecipeShare.Benchy.csproj", "{6115FDFE-8503-41D3-AB64-2A4BD7A25904}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{349EC62A-85E3-C852-F5FF-E97A8E3AB0F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{349EC62A-85E3-C852-F5FF-E97A8E3AB0F5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{349EC62A-85E3-C852-F5FF-E97A8E3AB0F5}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6115FDFE-8503-41D3-AB64-2A4BD7A25904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6115FDFE-8503-41D3-AB64-2A4BD7A25904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6115FDFE-8503-41D3-AB64-2A4BD7A25904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6115FDFE-8503-41D3-AB64-2A4BD7A25904}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -94,37 +94,50 @@ Before you begin, ensure you have the following installed:
     This will usually open the application in your default browser at `http://localhost:3000` but may be deferent. 
 
 ---
-
 ## Architecture Diagram
 
-This diagram illustrates the high-level components and their interactions within the RecipeShare application.
+This high-level diagram illustrates the main components of the RecipeShare application and their interaction flow.
+(Note: This diagram is rendered using Mermaid.js and might require a compatible Markdown viewer like GitHub's for proper display.)
 
 ```mermaid
 graph TD
-    subgraph Client
+    subgraph Client Application
         A[React Frontend]
     end
 
-    subgraph Backend (ASP.NET Core)
-        B[API Controllers] --> C[Service Layer]
-        C --> D[Repository/Data Access]
+    subgraph Backend System (ASP.NET Core)
+        B[API Controllers] --> C{Service Layer}
+        C --> D{Data Access Layer}
         D --> E((SQL Server Database))
-        F[RecipeShare.Util (Shared Models/Logic)]
-        G[RecipeShare.Utils (Additional Utilities)]
+
+        subgraph Shared Libraries
+            F[RecipeShare.Util]
+            G[RecipeShare.Utils]
+        end
+    end
+
+    subgraph Development & Testing
+        Test[RecipeShare.Test]
     end
 
     A -- HTTP Requests --> B
-    B -- Uses --> C
-    C -- Uses --> D
-    D -- ORM / Data --> E
-    B -- Uses --> F
-    C -- Uses --> F
-    D -- Uses --> F
-    B -- Uses --> G
-    C -- Uses --> G
-    D -- Uses --> G
-    Test[RecipeShare.Test (Unit/Integration Tests)] -- Tests --> B & C & D & F & G
+    B -- Orchestrates --> C
+    C -- Persists/Retrieves --> D
+    D -- Communicates With --> E
 
+    B -- Utilizes --> F
+    B -- Utilizes --> G
+    C -- Utilizes --> F
+    C -- Utilizes --> G
+    D -- Utilizes --> F
+    D -- Utilizes --> G
+
+    Test -- Tests Components In --> B
+    Test -- Tests Components In --> C
+    Test -- Tests Components In --> D
+    Test -- Tests Components In --> F
+    Test -- Tests Components In --> G
+```
 ## Rationale
 
 
@@ -176,3 +189,8 @@ The overall solution is deliberately organized into multiple distinct projects (
 * **Testability:** Dedicated test projects (`RecipeShare.Test`) enable the creation of isolated unit, integration, and potentially functional tests for different layers of the application, leading to a more robust and reliable system.
 * **Faster Builds:** Changes made within one project generally only necessitate the recompilation of that specific project and its immediate dependents, which significantly speeds up build times during development cycles.
 
+## Benchmark Results
+
+Here are the benchmark results for 500 sequential calls to `GET /api/recipes`:
+
+![Benchmark Results](Screenshot 2025-07-27 215116.png)
