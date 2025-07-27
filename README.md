@@ -193,4 +193,4 @@ The overall solution is deliberately organized into multiple distinct projects (
 
 Here are the benchmark results for 500 sequential calls to `GET /api/recipes`:
 
-![Benchmark Results](Screenshot 2025-07-27 215116.png)
+![Benchmark Results](Screenshot20250727215116.png)
