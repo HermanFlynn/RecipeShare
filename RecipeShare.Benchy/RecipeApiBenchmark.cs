@@ -1,6 +1,4 @@
 ﻿using BenchmarkDotNet.Attributes;
-using System.Net.Http;
-using System.Threading.Tasks;
 
 public class RecipeApiBenchmark
 {
@@ -8,7 +6,7 @@ public class RecipeApiBenchmark
 
 	public RecipeApiBenchmark()
 	{
-		_httpClient = new HttpClient { BaseAddress = new Uri("http://localhost:5154") }; // Update with your API URL
+		_httpClient = new HttpClient { BaseAddress = new Uri("http://localhost:5154") };
 	}
 
 	[Benchmark]

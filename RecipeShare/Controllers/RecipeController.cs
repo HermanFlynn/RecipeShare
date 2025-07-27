@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using RecipeShare.API.Helpers;
-using RecipeShare.Util.Models;
 using RecipeShare.Util.Models.Database;
 using RecipeShare.Util.Services;
 using System.Diagnostics.CodeAnalysis;

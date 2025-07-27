@@ -225,7 +225,7 @@ namespace RecipeShare.Test
 			var filteredRecipes = await _recipeService.FilterAsync(tagsToFilter);
 
 			Assert.NotNull(filteredRecipes);
-			Assert.Equal(_initialRecipes.Count(r => (bool)!r.IsDeleted), filteredRecipes.Count); // All non-deleted recipes
+			Assert.Equal(_initialRecipes.Count(r => (bool)!r.IsDeleted), filteredRecipes.Count);
 		}
 
 		[Fact]

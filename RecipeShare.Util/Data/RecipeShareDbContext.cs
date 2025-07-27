@@ -9,7 +9,6 @@ namespace RecipeShare.Util.Data
 	{
 		public RecipeShareDbContext CreateDbContext(string[] args)
 		{
-			// Build configuration (assuming appsettings.json exists in the same directory)
 			IConfigurationRoot configuration = new ConfigurationBuilder()
 				.SetBasePath(Directory.GetCurrentDirectory())
 				.AddJsonFile("appsettings.json")
