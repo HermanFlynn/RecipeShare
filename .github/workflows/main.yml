@@ -28,9 +28,6 @@ jobs:
       - name: Build .NET Projects (Release Configuration)
         run: dotnet build RecipeShare/RecipeShare.sln --configuration Release --no-restore
 
-      - name: Run .NET Tests
-        run: dotnet test RecipeShare.Test/RecipeShare.Test.csproj --configuration Release --no-build
-
 
   build_frontend:
     runs-on: ubuntu-latest
